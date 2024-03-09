@@ -14,13 +14,17 @@ sort.addEventListener("click", () => {
     const numeros = parseInt(qntnumeros.value)
     const min = parseInt(numInicio.value)
     const max = parseInt(numFim.value)
+    //const divSorteados = 
 
     for (let i = 0; i < numeros; i++) {
-        let aleatorio = Math.round(Math.random() * (max - min+1) + min);
+        let aleatorio = Math.floor(Math.random() * (max - min+1) + min);
         console.log(aleatorio);
         sorteados.push(aleatorio)
     }
     console.log(sorteados);
+
+    document.getElementById("sorteados").innerHTML = `<p> ${sorteados} </p>`
+
 })
 
 restart.addEventListener("click", ()=>{
