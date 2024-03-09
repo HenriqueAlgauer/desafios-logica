@@ -1,23 +1,39 @@
 //criar um array vazio, popular ele com o menor numero até o maior numero
 //gerar um numero aleatório que será o index do array
-    // -> importar função Math.random
+// -> importar função Math.random
 
-const qntnumeros = document.getElementById("quantidade")
-const numInicio = document.getElementById("de")
-const numFim = document.getElementById("ate")
 const sort = document.getElementById("btn-sortear")
 const restart = document.getElementById("btn-reiniciar")
 
-console.log(sort);
-console.log(restart);
+let qntnumeros = document.getElementById("quantidade")
+let numInicio = document.getElementById("de")
+let numFim = document.getElementById("ate")
+let sorteados = []
 
-sort.addEventListener("click", ()=>{
-    const qntnum = qntnumeros.value
-    const menor = numInicio.value
-    const maior = numFim.value
+sort.addEventListener("click", () => {
+    const numeros = parseInt(qntnumeros.value)
+    const min = parseInt(numInicio.value)
+    const max = parseInt(numFim.value)
 
-    for(let i=0; i<qntnum;i++){
-        let aleatorio = Math.floor(Math.random() * (menor - maior) + menor + maior);
+    for (let i = 0; i < numeros; i++) {
+        let aleatorio = Math.round(Math.random() * (max - min+1) + min);
         console.log(aleatorio);
+        sorteados.push(aleatorio)
     }
+    console.log(sorteados);
 })
+
+restart.addEventListener("click", ()=>{
+
+    console.log('foi');
+    qntnumeros.value = ''
+    numFim.value = ''
+    numInicio.value = ''
+})
+
+// let menor = 40
+// let maior = 10
+// for(let i=0; i<5;i++){
+//     let x = Math.round(Math.random() * (maior-menor)+menor);
+//     console.log('X = '+x);
+// }
