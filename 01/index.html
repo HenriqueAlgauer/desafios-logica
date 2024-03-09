@@ -12,30 +12,32 @@
 
 <body>
     <div class="container">
-
-        <div class="container__campo">
-            <label class="texto__paragrafo">Quantidade de números</label>
-            <input class="container__input" id="quantidade" type="number" min="1">
+        
+        <div class="titulo">
+            <h1>Sorteador <br> de número</h1>
+            <p>Conheça já o SORTEADOR DE NÚMEROS, ele possui a incrível funcionalidade de <strong>sortear</strong> um número na amplitude que você desejar.</p>
         </div>
-
-        <div class="container__campo">
-            <label class="texto__paragrafo">Quantidade de números</label>
-            <input class="container__input" id="quantidade" type="number" min="1">
-        </div>
-
-        <div class="container__campo">
-            <label class="texto__paragrafo">Do número</label>
-            <input class="container__input" id="de" type="number" min="1">
-        </div>
-
-        <div class="container__campo">
-            <label class="texto__paragrafo">Até o número</label>
-            <input class="container__input" id="ate" type="number" min="1">
-        </div>
-
-        <div class="chute container__botoes">
-            <button onclick="sortear()" id="btn-sortear" class="container__botao">Sortear</button>
-            <button onclick="reiniciar()" id="btn-reiniciar" class="container__botao-desabilitado">Reiniciar</button>
+        <div class="numeros">
+            
+            <div class="container-campo">
+                <label class="texto-paragrafo">Quantidade de números</label>
+                <input class="container-input" id="quantidade" type="number" min="1">
+            </div>
+            
+            <div class="container-campo">
+                <label class="texto-paragrafo">Do número</label>
+                <input class="container-input" id="de" type="number" min="1">
+            </div>
+            
+            <div class="container-campo">
+                <label class="texto-paragrafo">Até o número</label>
+                <input class="container-input" id="ate" type="number" min="1">
+            </div>
+            
+            <div class="chute container-botoes">
+                <button onclick="sortear()" id="btn-sortear" class="container-botao">Sortear</button>
+                <button onclick="reiniciar()" id="btn-reiniciar" class="container-botao-desabilitado">Reiniciar</button>
+            </div>
         </div>
 
 </body>
