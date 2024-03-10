@@ -14,30 +14,23 @@ sort.addEventListener("click", () => {
     const numeros = parseInt(qntnumeros.value)
     const min = parseInt(numInicio.value)
     const max = parseInt(numFim.value)
-    //const divSorteados = 
 
-    for (let i = 0; i < numeros; i++) {
+    for (let i = 0; i < numeros;i++){
         let aleatorio = Math.floor(Math.random() * (max - min+1) + min);
-        console.log(aleatorio);
+        while(sorteados.includes(aleatorio)){
+            aleatorio = Math.floor(Math.random() * (max - min+1) + min);
+        }
         sorteados.push(aleatorio)
     }
-    console.log(sorteados);
 
-    document.getElementById("sorteados").innerHTML = `<p> ${sorteados} </p>`
+    document.getElementById("sorteados").innerHTML = 
+    `<h2> Números sorteados: </h2>
+    <p> ${sorteados.sort()} </p>`
 
 })
 
 restart.addEventListener("click", ()=>{
-
-    console.log('foi');
     qntnumeros.value = ''
     numFim.value = ''
     numInicio.value = ''
 })
-
-// let menor = 40
-// let maior = 10
-// for(let i=0; i<5;i++){
-//     let x = Math.round(Math.random() * (maior-menor)+menor);
-//     console.log('X = '+x);
-// }
